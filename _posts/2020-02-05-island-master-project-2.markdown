@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Island Master 회고록 1편
-date: 2020-01-30 16:14:00 +0900
+date: 2020-02-05 12:00:00 +0900
 description: Unity 3D, Aseprite 를 활용하여 모바일 / PC 용 1인 게임 개발을 진행중...     진행 과정에 따라 주기적인 업데이트가 이루어집니다. 일련의 단계에 따라 테스트 용 어플리케이션(Apk 파일)이 업로드 될 예정이며 해당 파일의 공유는 제한됩니다.
 img: slime.gif
 tags: Game Development
