@@ -2,12 +2,12 @@
 layout: post
 title: 우아한 테크 코스 프리코스 2주차 후기
 date: 2020-12-04 20:10:00 +0900
-description: 자동차 레이싱 게임
+description: 자동차 경주 게임
 img: woowacourse.jpg
 tags: Java Development
 ---
 
-# 숫자 야구 게임 ⚾
+# 자동차 경주 게임 🚙
 링크 : https://github.com/lns13301/java-racingcar-precourse/tree/lns13301
 
 ## 회고록
