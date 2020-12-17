@@ -75,15 +75,18 @@ Genshin Impact (이하 원신)에서 제공되는 기원(뽑기)를 비슷하게
 	
 	- 등록 정보 (12월 15일 기준, 작성일은 12월 17일이지만 구글에서 제공되는 합산 정보는 2일전 정보가 보여진다.)
 	
-	<img src="https://github.com/lns13301/github-blog/blob/master/assets/img/genshin-graph.png">
+	<img src="/assets/img/genshin-graph.png">
+	<!-- result : https://github.com/lns13301/github-blog/blob/master/assets/img/genshin-graph.png -->
 	
 	- 국가별 설치 현황 (12월 15일 기준 대한민국 설치 비율 66.82%)
 	
-	<img src="https://github.com/lns13301/github-blog/blob/master/assets/img/genshin-nation.png">
+	<img src="/assets/img/genshin-nation.png">
+		<!-- result : https://github.com/lns13301/github-blog/blob/master/assets/img/genshin-nation.png -->
 	
 	- 신규 설치자, 이탈 자 (12월 15일 기준 기기에 설치를 보유한 유저의 수는 1,128 명, 실질 이용자수는 40% 이하라고 볼 수 있겠다.)
 	
-	<img src="https://github.com/lns13301/github-blog/blob/master/assets/img/genshin-user.png">
+	<img src="/assets/img/genshin-user.png">
+	<!-- result : https://github.com/lns13301/github-blog/blob/master/assets/img/genshin-user.png -->
 	
 5. 광고
 
@@ -99,7 +102,8 @@ Genshin Impact (이하 원신)에서 제공되는 기원(뽑기)를 비슷하게
 
 	- 광고 수익
 	
-	<img src="https://github.com/lns13301/github-blog/blob/master/assets/img/genshin-ad.png">
+	<img src="/assets/img/genshin-ad.png">
+	<!-- result : https://github.com/lns13301/github-blog/blob/master/assets/img/genshin-ad.png -->
 		
 6. 후기
 
