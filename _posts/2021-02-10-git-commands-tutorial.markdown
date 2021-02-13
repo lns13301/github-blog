@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 깃 명령어 정리
-date: 2021-02-12 22:00:00 +0900
+date: 2021-02-13 16:15:00 +0900
 description: Git commands
 img: git_icon.png
 tags: Git Study
@@ -100,9 +100,9 @@ tags: Git Study
 - 메시지와 함게 커밋하기 방법 1
 	> $ git commit -m "Commit Message"
 - 메세지와 함께 커밋하기 방법 2
-	> $ git commit -m "Commit Title
-	> commit message 1
-	> commit message 2
+	> $ git commit -m "Commit Title<br>
+	> commit message 1<br>
+	> commit message 2<br>
 	> commit message 3"
 
 **2. Git 브랜치**
@@ -112,7 +112,7 @@ tags: Git Study
 - 쉽게 생각하면 "하나의 커밋과 그 부모 커밋들을 포함하는 작업 내역" 이라고 생각하면 된다.
 - 커밋들 사이에 책갈피를 끼워 넣는 것이라고 본다.
 	- 커밋 단위로 원하는 위치로 이동이 가능하다.
-		> git switch [Commit Hashcode]
+		> git switch [Commit HashID]
 	- 브랜치는 특정 위치에서 시작해서 그 위치에서 이후에 작업한 내용의 가장 최신 위치의 커밋의 위치를 나타낸다.
 
 - 브랜치 생성
@@ -154,7 +154,7 @@ tags: Git Study
 - 합쳐질 곳의 대상이 될 브랜치를 현재 브랜치에 합치기
 	> $ git rebase [Target Branch Name]
 - 대상 브랜치의 커밋을 합친 브랜치로 이동시키기
-	> $ git switch [Target Branch Name]
+	> $ git switch [Target Branch Name]<br>
 	> $ git rebase [Branch Name]
 - [Target Branch Name] 가 [Branch Name] 의 부모쪽에 있었기 때문에, 단순히 그 브랜치를 더 앞쪽의 커밋을 가리키게 이동하는 것이 전부이다.(같은 위치에 있게 됨)
 
@@ -170,7 +170,7 @@ tags: Git Study
 - 일반 적으로 HEAD 는 브랜치의 이름을 가리키고 있다.
 
 - HEAD 를 브랜치에서 분리해보기
-	> $ git switch [Commit Hashcode]
+	> $ git switch [Commit HashID]
 
 **2. Git 상대 참조 1 (Relative Refs)**
 
@@ -193,7 +193,7 @@ tags: Git Study
 	- 이동할 브랜치를 특정 위치를 기준으로 몇 번 이동
 		> $ git branch -f [Branch Name] [기준 브랜치 이름 or HEAD]~[이동 횟수]
 	- 이동할 브랜치를 특정 위치로 이동
-		> $ git branch -f [Branch Name] [브랜치 이름 or 커밋 해시 코드]
+		> $ git branch -f [Branch Name] [브랜치 이름 or 커밋 해시 ID]
 
 **4. Git 작업 되돌리기**
 
@@ -220,9 +220,9 @@ tags: Git Study
 - 일련의 커밋들에대한 복사본을 만드는 기능이다.
 
 - 현재 위치에서 특정 커밋들을 복사하여 현재 브랜치에 커밋하기
-	> $ git cherry-pick [Commit Hashcode]
-- 뒤에 여러 개의 커밋 해시코드를 작성하면 여러 개가 동시에 커밋된다.
-	> $ git cherry-pick [Commit Hashcode] [Commit Hashcode] [Commit Hashcode]
+	> $ git cherry-pick [Commit HashID]
+- 뒤에 여러 개의 커밋 해시 ID를 작성하면 여러 개가 동시에 커밋된다.
+	> $ git cherry-pick [Commit HashID] [Commit HashID] [Commit HashID]
 
 **2. Git 인터랙티브 리베이스**
 
@@ -236,7 +236,7 @@ tags: Git Study
 	- 적용할 커밋들의 순서를 UI를 통해 바꿀 수 있다.
 	- 원하지 않는 커밋들을 뺄 수 있다. (pick 을 통해)
 	- 커밋을 스쿼시 할 수 있다.
-	
+
 ~~~
 스쿼시(Squash) 커밋
 	- 여러 개의 커밋을 하나의 커밋으로 압축 시키는 것이다.
@@ -246,8 +246,23 @@ tags: Git Study
 ~~~
 
 - 현재 위치에서 HEAD 로부터 4번째 부모 까지의 커밋을 재조정 하기
-	> $ git rebase -i HEAD~4  
-  
+	> $ git rebase -i HEAD~4
+
+**3. Git 복구 **
+
+- rebase, reset 등으로 커밋이 삭제 되었을 때, 보관된 git 이력을 통해 복구할 수 있다.
+- git 이력 조회하기
+	> $ git reflog
+
+- 커밋 복구하기
+	> $ git reflog<br>
+	>> 삭제된 커밋 해시 ID를 확인 후 복구를 진행한다.<br>
+	> $ git reset --hard [Commit HashID]
+
+- 브랜치 복구하기
+	> $ git reflog |grep [Branch Name]<br>
+	> $ git switch -c [Deleted Branch Name] [Commit HashID]
+
 ## 원격 : Git Push & Pull
 
 - 자신의 로컬 이외에서 접근할 때에 유용하다.
@@ -274,7 +289,7 @@ tags: Git Study
 - 원격 저장소 브랜치 제거 방법 1
 	> $ git push origin --delete [브랜치 이름]
 - 원격 저장소 브랜치 제거 방법 2
-	> $ git branch -d [브랜치 이름]
+	> $ git branch -d [브랜치 이름]<br>
 	> $ git push origin [브랜치 이름]
 
 **3. Git Fetch**
@@ -285,8 +300,8 @@ tags: Git Study
 	- 로컬에서 나타내는 원격 저장소의 상태를 실제 원격 저장소의 상태(fetch 를 진행하는 시점)로 동기화 한다.
 - fetch 는 원격 저장소의 최신 내용을 받아오지만 로컬 저장소의 내용을 변경하는 것은 아무 것도 없다!!
 	- 받아온 원격 저장소의 최신 내용을 실제 로컬 저장소에 적용 시키는 명령어는 따로 있다.
-		> $ git cherry-pick [원격 저장소 이름]/[브랜치 이름]
-		> $ git rebase [원격 저장소 이름]/[브랜치 이름]
+		> $ git cherry-pick [원격 저장소 이름]/[브랜치 이름]<br>
+		> $ git rebase [원격 저장소 이름]/[브랜치 이름]<br>
 		> $ git merge [원격 저장소 이름]/[브랜치 이름]
 
 - 원격 저장소에서 내려받기
@@ -322,19 +337,19 @@ tags: Git Study
 - 로컬의 작업을 원격 브랜치의 최신 상태를 기반이 되게끔 만들면 해결할 수 있다.
 	- 리베이스 등을 이용하면 된다.
 - rebase: 작업중인 브랜치에서, 최신화 -> 리베이스 -> Push
-	> $ git fetch
-	> $ git rebase [원격 저장소 이름]/[브랜치 이름]
+	> $ git fetch<br>
+	> $ git rebase [원격 저장소 이름]/[브랜치 이름]<br>
 	> $ git push [원격 저장소 이름] [브랜치 이름]
 - 줄임 명령어
-	> $ git pull --rebase
+	> $ git pull --rebase<br>
 	> $ git push
 
 - merge: 작업중인 브랜치에서, 최신화 -> 합치기 -> Push
-	> $ git fetch
-	> $ git merge [원격 저장소 이름]/[브랜치 이름]
+	> $ git fetch<br>
+	> $ git merge [원격 저장소 이름]/[브랜치 이름]<br>
 	> $ git push [원격 저장소 이름] [브랜치 이름]
 - 줄임 명령어
-	> $ git pull
+	> $ git pull<br>
 	> $ git push
 
 **8. Git 원격 저장소 거부**
@@ -348,9 +363,9 @@ tags: Git Study
 		- 원격 저장소와 동기화 될 수 있도록 로컬 저장소의 main 브랜치를 reset 한다.
 			- 하지 않으면 다음에 pull 시도할 때 문제가 발생하거나 다른 협업자들의 커밋이 나의 커밋과 충돌할 수 있다.
 		- 위의 과정 명령어(이미 작업 해버린 main 브랜치에서 시작)
-			> git branch [브랜치 이름]
-			> git reset main [원격 저장소 이름]/[브랜치 이름]
-			> git switch [브랜치 이름]
+			> git branch [브랜치 이름]<br>
+			> git reset main [원격 저장소 이름]/[브랜치 이름]<br>
+			> git switch [브랜치 이름]<br>
 			> git push [원격 저장소 이름] [브랜치 이름]
 
 ### 참조
@@ -360,3 +375,4 @@ tags: Git Study
 - [Git Checkout (Switch, Restore)](https://blog.outsider.ne.kr/1505)
 - [Git Game](https://learngitbranching.js.org/?locale=ko)
 - [Git branches](https://www.youtube.com/watch?v=MIGliPrUMGE)
+- [Git reflog](https://suwoni-codelab.com/git/2018/04/07/Git-reflog/)
