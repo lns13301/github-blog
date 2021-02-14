@@ -379,3 +379,4 @@ tags: Git Study
 - [Git Game](https://learngitbranching.js.org/?locale=ko)
 - [Git branches](https://www.youtube.com/watch?v=MIGliPrUMGE)
 - [Git reflog](https://suwoni-codelab.com/git/2018/04/07/Git-reflog/)
+- [Git remote](https://backlog.com/git-tutorial/kr/reference/remote.html)
