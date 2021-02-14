@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 깃 명령어 정리
-date: 2021-02-13 16:15:00 +0900
+date: 2021-02-14 20:00:00 +0900
 description: Git commands
 img: git_icon.png
 tags: Git Study
@@ -84,6 +84,9 @@ tags: Git Study
 	> git status
 - 특정 위치의 스테이지 변경 상태 확인하기
 	> git status [확인할 위치]
+
+## Branch PPT
+[Git Commands](https://docs.google.com/presentation/d/1yGVOKN6MYa_TvsINmdA4tGr5hHOolGfKLg35pPo1V4A/edit?usp=sharing)
 
 ## 로컬 : Git 기본
 
@@ -248,7 +251,7 @@ tags: Git Study
 - 현재 위치에서 HEAD 로부터 4번째 부모 까지의 커밋을 재조정 하기
 	> $ git rebase -i HEAD~4
 
-**3. Git 복구 **
+**3. Git 복구**
 
 - rebase, reset 등으로 커밋이 삭제 되었을 때, 보관된 git 이력을 통해 복구할 수 있다.
 - git 이력 조회하기
