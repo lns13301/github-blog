@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 깃 명령어 정리
-date: 2021-02-14 20:00:00 +0900
+date: 2021-02-15 20:20:00 +0900
 description: Git commands
 img: git_icon.png
 tags: Git Study
@@ -126,6 +126,8 @@ tags: Git Study
 	> $ git checkout [Branch Name]
 - 브랜치 이동 2
 	> $ git switch [Branch Name]
+- 브랜치 이동 3
+    > $ git branch -m [Branch Name]
 
 - 브랜치 생성 & 이동 1
 	> $ git checkout -b [Branch Name]
@@ -226,6 +228,8 @@ tags: Git Study
 	> $ git cherry-pick [Commit HashID]
 - 뒤에 여러 개의 커밋 해시 ID를 작성하면 여러 개가 동시에 커밋된다.
 	> $ git cherry-pick [Commit HashID] [Commit HashID] [Commit HashID]
+- 특정 범위 내의 커밋을 한 번에 추가할 수 있다.
+    > $ git cherry-pick [Commit HashID]^..[Commit HashID]
 
 **2. Git 인터랙티브 리베이스**
 
