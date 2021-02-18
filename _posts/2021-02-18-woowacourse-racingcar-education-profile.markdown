@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 우아한 테크 코스 level 1-1 Racing-car 미션 회고 및 학습 프로필
-date: 2020-02-18 22:15:00 +0900
+date: 2021-02-18 22:15:00 +0900
 description: Racing-car 학습 프로필, 회고
 img: woowacourse.png
 tags: java study
