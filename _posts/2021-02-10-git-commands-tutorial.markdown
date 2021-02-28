@@ -173,6 +173,7 @@ tags: Git Study
 - 현재 체크아웃된(작업중인) 커밋을 가리킨다.
 - 항상 작업트리의 가장 최근 커밋을 가리키며 작업 트리에 변화를 주는 git 명령어의 대부분은 HEAD 를 변경하는 것으로 시작한다.
 - 일반 적으로 HEAD 는 브랜치의 이름을 가리키고 있다.
+- 커밋의 해쉬값 혹은 상대참조 등으로 커밋으로 이동할 때는 switch 가 아닌 checkout 을 사용 해야 한다.
 
 - HEAD 를 브랜치에서 분리해보기
 	> $ git switch [Commit HashID]
@@ -186,14 +187,14 @@ tags: Git Study
 - [Branch Name] 의 조부모로 이동
 	> $ git switch [Branch Name]^^
 - 현재 위치의 부모로 이동
-	> $ git switch HEAD^
+	> $ git checkout HEAD^
 
 **3. Git 상대 참조 2**
 
 - 연산자 (~) : 참조이름 뒤에 ~와 숫자를 명시해주면 해당 숫자만큼 돌아간다.
 
 - 현재 위치에서 4번 돌아가기
-	> $ git switch HEAD~4
+	> $ git checkout HEAD~4
 - 브랜치를 특정 커밋에서 이동하기
 	- 이동할 브랜치를 특정 위치를 기준으로 몇 번 이동
 		> $ git branch -f [Branch Name] [기준 브랜치 이름 or HEAD]~[이동 횟수]
