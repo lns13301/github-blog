@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 이펙티브 자바 Item 2: 생성자에 매개변수가 많다면 빌더를 고려하라
+title: 이펙티브 자바 Item 2 - 생성자에 매개변수가 많다면 빌더를 고려하라
 date: 2021-03-07 22:30:00 +0900
 description: 빌더 패턴 학습 내용
 img: effective_java.png

@@ -3,7 +3,7 @@ layout: post
 title: 이펙티브 자바 Item 1 - 생성자 대신 정적 팩터리 메서드를 고려하라
 date: 2021-03-06 02:30:00 +0900
 description: 정적 팩터리 메서드 학습 내용
-img: woowacourse.jpg
+img: effective_java.png
 tags: java study
 ---
 
