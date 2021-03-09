@@ -17,172 +17,172 @@ tags: java study
 
 ```java
 public interface State {
-	State draw(Card card);
-	
-	State stay();
-	
-	boolean isFinished();
-	
-	Cards cards();
-	
-	double profit(double money);
+    State draw(Card card);
+
+    State stay();
+
+    boolean isFinished();
+
+    Cards cards();
+
+    double profit(double money);
 }
 
 public abstract class Started implements State {
-  protected Cards cards;
-  
-  public Started(final Cards cards) {
-    this.card = cards;
-  }
+    protected Cards cards;
+
+    public Started(final Cards cards) {
+        this.card = cards;
+    }
 }
 
 public abstract class Finished extends Started {
-  public Finished(final Cards cards) {
-    super(cards);
-  }
-  
-  @Override
-  public State draw(final Card card) {
-    throw new IllegalArgumentException("[ERROR] 더 이상 카드를 드로우할 수 없습니다.");
-  }
-  
-  @Override
-  public State stay() {
-    throw new IllegalArgumentException("[ERROR] 스테이 할 수 없습니다.");
-  }
-  
-  @Override
-  public boolean isFinished() {
-    return true;
-  }
-  
-  @Override
-  public double profit(double money) {
-    return money * earningRate();
-  }
-  
-  public abstract double earningRate();
+    public Finished(final Cards cards) {
+        super(cards);
+    }
+
+    @Override
+    public State draw(final Card card) {
+        throw new IllegalArgumentException("[ERROR] 더 이상 카드를 드로우할 수 없습니다.");
+    }
+
+    @Override
+    public State stay() {
+        throw new IllegalArgumentException("[ERROR] 스테이 할 수 없습니다.");
+    }
+
+    @Override
+    public boolean isFinished() {
+        return true;
+    }
+
+    @Override
+    public double profit(double money) {
+        return money * earningRate();
+    }
+
+    public abstract double earningRate();
 }
 
 public abstract class Running extends Started {
-  public Running(final Cards cards) {
-    super(cards);
-  }
-  
-  @Override
-  public boolean isFinished() {
-    return false;
-  }
-  
-  @Override
-  public double profit(final double money) {
-    throw new IllegalArgumentException("[ERROR] 진행 중에는 이익 확인을 할 수 없습니다.")
-  }
+    public Running(final Cards cards) {
+        super(cards);
+    }
+
+    @Override
+    public boolean isFinished() {
+        return false;
+    }
+
+    @Override
+    public double profit(final double money) {
+        throw new IllegalArgumentException("[ERROR] 진행 중에는 이익 확인을 할 수 없습니다.")
+    }
 }
 
 public class Cards {
-  private final List<Card> cards;
-  
-  public Cards(final Card... cards) {
-    this(Arrays.asList(value));
-  }
-  
-  public Cards(final List<Card> cards) {
-    this.cards = new ArrayList<>(cards);
-  }
-  
-  public void add(final Card card) {
-    cards.add(card);
-  }
-  
-  public List<Card> card() {
-    return new ArrayList<>(values);
-  }
-  
-  public boolean isBlackjack() {
-    return values.size() == 2 && score().isBlackjack();
-  }
-  
-  public boolean isBust() {
-    return score().isBust();
-  }
-  
-  public int score() {
-    int score = sum();
-    final long numberOfAces = numberOfAces();
-    
-    for (int i = 0; i < numberOfAces; i++) {
-      score = score.plusTenIfNotBust();
+    private final List<Card> cards;
+
+    public Cards(final Card... cards) {
+        this(Arrays.asList(value));
     }
-    
-    return score;
-  }
-  
-  private long numberOfAces() {
-    return cards.stream()
-      .filter(Card::isAce)
-      .count();
-  }
-  
-  private int sum() {
-    return (int) cards.stream()
-      .mapToInt(Card::getScore)
-      .sum();
-  }
+
+    public Cards(final List<Card> cards) {
+        this.cards = new ArrayList<>(cards);
+    }
+
+    public void add(final Card card) {
+        cards.add(card);
+    }
+
+    public List<Card> card() {
+        return new ArrayList<>(values);
+    }
+
+    public boolean isBlackjack() {
+        return values.size() == 2 && score().isBlackjack();
+    }
+
+    public boolean isBust() {
+        return score().isBust();
+    }
+
+    public int score() {
+        int score = sum();
+        final long numberOfAces = numberOfAces();
+
+        for (int i = 0; i < numberOfAces; i++) {
+            score = score.plusTenIfNotBust();
+        }
+
+        return score;
+    }
+
+    private long numberOfAces() {
+        return cards.stream()
+                .filter(Card::isAce)
+                .count();
+    }
+
+    private int sum() {
+        return (int) cards.stream()
+                .mapToInt(Card::getScore)
+                .sum();
+    }
 }
 
 // 상태 클래스
 public class Bust extends Finished {
-	public Bust(final Cards cards) {
-		super(cards);
-	}
-	
-	@Override
-	public double earningRate() {
-		return 0;
-	}
+    public Bust(final Cards cards) {
+        super(cards);
+    }
+
+    @Override
+    public double earningRate() {
+        return 0;
+    }
 }
 
 public class Stay extends Finished {
-  public Stay(final Cards cards) {
-    super(cards);
-  }
-  
-  @Override
-  public double earningRate() {
-    return 1;
-  }
+    public Stay(final Cards cards) {
+        super(cards);
+    }
+
+    @Override
+    public double earningRate() {
+        return 1;
+    }
 }
 
 public class Hit extends Running {
-  public Hit(final Cards cards) {
-    super(cards);
-  }
-  
-  @Override
-  public State draw(final Card card) {
-    cards.add(card);
-    if (cards.isBust()) {
-      return new Bust(cards);
+    public Hit(final Cards cards) {
+        super(cards);
     }
-    return new Hit(cards);
-  }
-  
-  @Override
-  public State stay() {
-    return new Stay(cards);
-  }
+
+    @Override
+    public State draw(final Card card) {
+        cards.add(card);
+        if (cards.isBust()) {
+            return new Bust(cards);
+        }
+        return new Hit(cards);
+    }
+
+    @Override
+    public State stay() {
+        return new Stay(cards);
+    }
 }
 
 public class Blackjack extends Finished {
-  public Blackjack(final Cards cards) {
-    super(cards);
-  }
-  
-  @Override
-  public double earningRate() {
-    return 1.5;
-  }
+    public Blackjack(final Cards cards) {
+        super(cards);
+    }
+
+    @Override
+    public double earningRate() {
+        return 1.5;
+    }
 }
 ```
 
