@@ -88,3 +88,46 @@ public int multiplyDouble(final int value) {
 ## 자바 함수
 
 프로그래밍 언어에서 함수라는 용어는 정적 메서드와 같은 의미로 사용된다. 자바 함수는 이에 더해 수학적인 함수처럼 사용되며 부작용을 일으키지 않는 함수를 의미한다.
+
+### 조작할 수 있는 값
+
+1. Int, double 등의 기본 값
+2. 객체 (객체의 레퍼런스 또한 클래스의 인스턴스를 가르킨다)
+
+### 프로그래밍에서 핵심은 값을 바꾸는 것
+
+이 값을 '일급 값(일급 시민)'이라고 부른다.
+
+프로그램을 실행하는 동안 전달할 수 없는 구조체는 '이급 시민'이다.
+
+메서드, 클래스는 그 자체로 값이 될 수 없는 '이급 시민'이다.
+
+## 메서드와 함수를 일급 시민으로
+
+일급 시민이 필요한 이유는 메서드를 일급값으로 사용하면 프로그래머가 활용할 수 있는 도구가 다양해지면서 프로그래밍이 수월해진다.
+
+### 메서드를 값으로
+
+1. 메서드 레퍼런스
+
+   - File 클래스에서 숨겨진 파일을 필터링 하기
+
+   ```java
+   File[] hiddenFileds = new File(".").listFiles(new FileFilter() {
+    public boolean accept(File file) {
+      return file.isHidden(); // 숨겨진 파일 필터링
+    }
+   })
+   ```
+
+   - 각 행이 무슨 작업을 하는지 투명하지 않다.
+
+   - File 클래스에는 이미 isHidden 이라는 메서드가 있다.
+
+   - 굳이 FileFilter로 isHidden 을 복잡하게 감싼 다음에 FileFilter 를 인스턴스화 해야 할까?
+
+   - Java 8 부터는 다음과 같이 구현할 수 있다.
+
+     ```java
+     File[] hiddenFiles = new File(".").listFiles(File::isHidden);
+     ```
