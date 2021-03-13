@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 모던 자바 인 액션 6장
+title: 모던 자바 인 액션 6장 1
 date: 2021-03-12 20:20:00 +0900
 description: 모던 자바 인 액션을 읽고 정리
 img: modern_java.png
