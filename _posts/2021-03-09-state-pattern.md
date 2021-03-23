@@ -2,7 +2,7 @@
 layout: post
 title: 우아한 테크 코스 자바 기초 강의 상태 패턴
 date: 2021-03-09 20:40:00 +0900
-description: Lotto 학습 프로필, 회고
+description: 우테코 수업
 img: woowacourse.png
 tags: java study
 ---
