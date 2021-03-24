@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 모던 자바 인 액션 1장
-date: 2021-03-09 20:40:00 +0900
+date: 2021-03-10 20:40:00 +0900
 description: 모던 자바 인 액션을 읽고 정리
 img: modern_java.png
 tags: java study
