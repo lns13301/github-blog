@@ -8,12 +8,12 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: lns13301 # add your name
 author-img: face.png # add your photo
-about-author: 개발자를 목표로 공부하는 lns13301 입니다. # add description
+about-author: 호기심이 생기면 탐구해보고 개발해보는 '강규한(와일더)' 입니다.<br>현재 우아한테크코스 백엔드 3기 교육생 입니다. # add description
 social-twitter: # add your Twitter handle
 social-facebook: # add your Facebook handle
-social-github: # add your Github handle
+social-github: https://github.com/ln13301 # add your Github handle
 social-linkedin: # add your Linkedin handle
-social-email: # add your Email address
+social-email: gyuhanKang@gmail.com # add your Email address
 
 # Disqus
 discus-identifier: mr-kang # add your discus identifier
