@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 우아한 테크 코스 level 2-2 Lotto 미션 회고 및 학습 프로필
+title: 우아한 테크 코스 level 2-2 지하철 노선도 미션 회고 및 학습 프로필
 date: 2021-05-22 20:50:00 +0900
 description: atdd subway 학습 프로필, 회고
 img: woowacourse.png
