@@ -49,6 +49,8 @@ atdd-subway-map 미션을 하면서 새롭게 학습한 내용을 정리했습�
 - [DevOps : End-to-End Test 개념, 종류, 방법](https://jjeongil.tistory.com/899)
 - [테스팅의 종류](https://ipex.tistory.com/entry/QA%ED%85%8C%EC%8A%A4%ED%8C%85%EC%9D%98-%EC%A2%85%EB%A5%98)
 
+
+
 ## [TDD] 통합 테스트 (Integrate Test) - 2
 
 ### 내용
@@ -59,6 +61,8 @@ atdd-subway-map 미션을 하면서 새롭게 학습한 내용을 정리했습�
 ### 링크
 
 - [통합테스트란 무엇인가요?](http://support.suresofttech.com/ko/support/solutions/articles/5000760844-%ED%86%B5%ED%95%A9%ED%85%8C%EC%8A%A4%ED%8A%B8%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94-)
+
+
 
 ## [TDD] 단위 테스트 (Unit Test) - 2
 
@@ -75,6 +79,8 @@ atdd-subway-map 미션을 하면서 새롭게 학습한 내용을 정리했습�
 ### 링크
 
 [[Terms] 단위 테스트, 인수테스트, 통합테스트 란?](https://m.blog.naver.com/tjdus25/221661896783)
+
+
 
 ## [Spring] @Transactional - 4
 
@@ -100,6 +106,8 @@ atdd-subway-map 미션을 하면서 새롭게 학습한 내용을 정리했습�
 ### 링크
 
 - [Spring 트랜잭션에 대해 알아보자](https://flowarc.tistory.com/entry/Spring-%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90)
+
+
 
 ## [Spring] @Valid & BindingResult - 4
 
@@ -551,3 +559,6 @@ atdd-subway-map 미션을 하면서 새롭게 학습한 내용을 정리했습�
 
 - [Java Reflection 개념 및 사용법](https://gyrfalcon.tistory.com/entry/Java-Reflection)
 - [자바 리플렉션(Java Reflection)과 동적 로딩](https://madplay.github.io/post/java-reflection)
+
+
+
