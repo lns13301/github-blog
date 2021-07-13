@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 우아한 테크 코스 level 2-3 지하철 경로 조회 미션 회고 및 학습 프로필
+title: 우아한테크코스 level 2-3 지하철 경로 조회 미션 회고 및 학습 프로필
 date: 2021-05-24 21:30:00 +0900
 description: atdd subway 학습 프로필, 회고
 img: woowacourse.png
@@ -123,7 +123,7 @@ Scale-out 방식으로 성능이 낮은 서버를 두 대 이상 배치할 경�
 - [로드밸런서의 개념과 특징](https://post.naver.com/viewer/postView.nhn?volumeNo=27046347&memberNo=2521903)
 - [로드 밸런서(Load Balancer)란?](https://nesoy.github.io/articles/2018-06/Load-Balancer)
 
-## [Token] JWT (Java Web Token) - 5
+## [Token] JWT (Json Web Token) - 5
 
 ### 내용
 

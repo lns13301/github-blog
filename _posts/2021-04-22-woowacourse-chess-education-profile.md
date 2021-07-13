@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 우아한 테크 코스 level 1-4 Lotto 미션 회고 및 학습 프로필
+title: 우아한테크코스 level 1-4 Lotto 미션 회고 및 학습 프로필
 date: 2021-04-22 20:50:00 +0900
 description: Chess 학습 프로필, 회고
 img: woowacourse.png

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 우아한 테크 코스 level 2-4 지하철 요금 협업 미션 회고 및 학습 프로필
+title: 우아한테크코스 level 2-4 지하철 요금 협업 미션 회고 및 학습 프로필
 date: 2021-06-21 22:35:00 +0900
 description: atdd subway 학습 프로필, 회고
 img: woowacourse.png
