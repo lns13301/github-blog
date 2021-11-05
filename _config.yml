@@ -1,7 +1,7 @@
 title: LNS github blog.
 description: LNS Blog
 permalink: ':title/'
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "/github-blog/" # the subpath of your site, e.g. /blog
 url: "https://lns13301.github.io" 
 site-twitter: #if your site has a twitter account, enter it here
 
